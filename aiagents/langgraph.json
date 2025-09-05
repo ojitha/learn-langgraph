@@ -3,5 +3,5 @@
   "graphs": {
     "agent": "./agents/example1/Example1Agent.py:graph"
   },
-  "env": ".env"
+  "env": "../../../.env"
 }
