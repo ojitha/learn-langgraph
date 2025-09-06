@@ -14,7 +14,7 @@ $2/$1.md : $2/$1.ipynb
 		--ExtractOutputPreprocessor.output_filename_template='fig_{index}{extension}'
 		
 	sed -i '' -E 's/\x1B\[[0-9;]*[mK]//g' $$@
-	sed -i '' -E 's/\.\/assets/\/assets/g' $$@
+	sed -i '' -E 's/\(\.\/assets/\(\/assets/g' $$@
 	cp $$@  ~/GitHub/ojitha.github.io/_drafts/
 
 	# Check if folder exists and create if needed
