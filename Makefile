@@ -1,6 +1,9 @@
 AIAgentsDir := aiagents
-AIAgentsSources := 2025-09-05-LangGrapStudioExample
+AIAgentsSources := 2025-09-05-LangGrapStudioExample 2025-09-06-Python_Type_Annotation
+source += $(foreach jupfile,$(AIAgentsSources), $(AIAgentsDir)/$(jupfile))
 
+files := $(foreach wrd,$(source),$(wrd).md)
+all: $(files)
 
 # Function to create ipynb --> md
 define make-markdown
